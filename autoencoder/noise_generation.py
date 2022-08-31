@@ -1,5 +1,10 @@
 from data_generator import *
 
+h, w = 256,256
+blur = lambda img : b(img, (10,10) ,cv2.BORDER_DEFAULT)
+reshape = lambda img : np.reshape(img, ((len(img), h, w, 1)))
+norm = lambda img: cv2.resize(img, (256, 256))/cv2.resize(img, (256, 256)).max()
+
 def norm_batch(imgs):
   return np.array([norm(img) for img in imgs])
 
