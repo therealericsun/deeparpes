@@ -1,0 +1,10 @@
+scikit-learn
+matplotlib
+yellowbrick
+numba
+h5py
+numpy
+matplotlib
+opencv-python
+tensorflow
+keras
