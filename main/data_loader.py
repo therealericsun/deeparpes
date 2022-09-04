@@ -1,7 +1,7 @@
 # define a loading function that unpacks the data
 # reshape automatically formats the angle data betewen -15 - 15 degrees
 
-from structures import *
+from deeparpes.main.structures import *
 
 def load_text(path, noise=False, factor =1., squish = True, squishsize = (28,28)):
   KE_min = -0.8
