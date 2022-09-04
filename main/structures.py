@@ -19,8 +19,8 @@ import numba
 import random
 import cv2
 
-from autoencoder.data_generator import *
-from autoencoder.noise_generator import *
+from deeparpes.autoencoder.data_generator import *
+from deeparpes.autoencoder.noise_generator import *
 
 @numba.jit(nopython=True)
 def sum_all(x_s, y_s, data):
