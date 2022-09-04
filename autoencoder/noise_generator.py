@@ -1,4 +1,4 @@
-from data_generator import *
+from deeparpes.autoencoder.data_generator import *
 
 h, w = 256,256
 blur = lambda img : b(img, (10,10) ,cv2.BORDER_DEFAULT)
