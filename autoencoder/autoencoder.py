@@ -1,5 +1,5 @@
-from noise_generator import *
-from data_generator import *
+from deeparpes.autoencoder.noise_generator import *
+from deeparpes.autoencoder.data_generator import *
 import tensorflow as tf
 import keras
 from keras.metrics import mean_squared_error
