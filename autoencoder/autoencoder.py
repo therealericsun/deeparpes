@@ -11,18 +11,21 @@ from keras import layers
 # x_train = np.concatenate([gen(3000))])
 # x_test = gen(100)
 
+print('Generating data')
 x_train = gen(6000)
 x_test = gen(100)
+print('Data generation complete')
 
 np.random.shuffle(x_train)
 np.random.shuffle(x_test)
 
+print('Adding Noise')
 x_train = reshape(x_train)
 x_test = reshape(x_test)
 
 x_train_noisy = noisy(x_train)
 x_test_noisy = noisy(x_test)
-
+print('Noise Complete')
 
 import matplotlib.pyplot as plt
 
