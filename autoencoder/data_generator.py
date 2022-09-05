@@ -6,6 +6,12 @@ import random
 import cv2
 import time
 
+from numba.core.errors import NumbaDeprecationWarning, NumbaPendingDeprecationWarning
+import warnings
+
+warnings.simplefilter('ignore', category=NumbaDeprecationWarning)
+warnings.simplefilter('ignore', category=NumbaPendingDeprecationWarning)
+
 @numba.jit(nopython=True)
 def TBM(kx,ky):
   t0 = 0.126
