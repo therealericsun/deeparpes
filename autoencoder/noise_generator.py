@@ -59,3 +59,5 @@ def make_p_noise(imgs, noise_factor = 0.4, hide_factor = 0.4, b = True):
   x = poisson(imgs)
   x = reshape(np.array(list(map(blur, x)))) if b else reshape(x)
   return np.clip(x, 0., 1.)
+
+noisy = lambda img : make_noise(make_p_noise(img, hide_factor = 0.5), b = True, noise_factor = 0.3, hide_factor=.4)
